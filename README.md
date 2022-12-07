@@ -3,6 +3,8 @@ Terraform is an open-source infrastructure as a code (IAC) tool that allows to c
 
 𝐓𝐞𝐫𝐫𝐚𝐠𝐫𝐮𝐧𝐭 is an additional wrapper that is built on top of the Terraform. Terraform is a great Infrastructure as Code tool to manage your infrastructure but as the project size grows and when you have multiple environments (Development, Testing, Staging, Production, etc..) at that time t𝐞𝐫𝐫𝐚𝐠𝐫𝐮𝐧𝐭 will be most useful tool.
 
+![2](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/3.png?raw=true)
+
 # Challenges with Terraform:
 If you need to manage multiple environments (Development, Testing, Staging, and Production etc..) infrastructure with Terraform then here are the challenges you might face with Terraform -
 
@@ -162,6 +164,8 @@ Well yes that's possible that is why terraform introduced a concept of modules w
 
 * The above code will fetch the code for creating EC2 instance from terraform registry
 
+![3](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/4.png?raw=true)
+
 * Now, we need to add the provider configuration in terraform.hcl file
 
   ```
@@ -247,17 +251,22 @@ Run Terragrunt commands:
 
 * terragrunt init
   The first command you need to run is terragrut init
+  ![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/5.png?raw=true)
   
 * terragrunt plan
   The above command will give you the execution plan
+  ![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/6.png?raw=true)
   
 * terragrunt apply
   The above command will create resources on AWS
+  ![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/7.png?raw=true)
   
 * terragrunt validate
   You can validate the code using above command
+  ![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/8.png?raw=true)
   
 You can verify 3 up & running EC2 instances on your AWS account!
+![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/9.png?raw=true)
  
 
 # Use different backend in each environment
@@ -310,12 +319,16 @@ You can verify 3 up & running EC2 instances on your AWS account!
 get_aws_account_id() is a built in terragrunt function to get the account ID of AWS account
 * path_relative_to_include() is also a build in terragrung function, it returns the relative path between the current terragrunt.hcl and other terragrunt.hcl file
 * Now run terragtunt init from any of the environment it will ask your permission to create S3 bucket
+![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/10.png?raw=true)
 
 * After that you can see S3 bucket like this
+![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/11.png?raw=true)
 
 * S3 bucket will have 3 folder of 3 environments
+![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/12.png?raw=true)
 
 * Each folder will contain state file for their environment
+![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/13.png?raw=true)
 
 #Advantages of Terragrunt:
 
@@ -340,7 +353,8 @@ get_aws_account_id() is a built in terragrunt function to get the account ID of 
 
 * Meanwhile stg & dev environment will use code of 1.0.0 release and prod will run on 1.0.1 release
 * Terragrunt also allows you to run different versions of Terraform and Terraform providers in different environments by using the generate block. For example, you can generate the required_providers and required_version settings, and set them to different versions in different environments. This allows you to carefully upgrade versions across your code, one environment or even one module at a time
-8 Now, let's destroy our resources with terragrunt destroy command
+
+* Now, let's destroy our resources with `terragrunt destroy` command
 
 # Conclusion:
 * Wrapping your Terraform with Terragrunt is very powerful to control and maintain the remote state with DRY concept.
