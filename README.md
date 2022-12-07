@@ -330,7 +330,7 @@ get_aws_account_id() is a built in terragrunt function to get the account ID of 
 * Each folder will contain state file for their environment
 ![4](https://github.com/DhruvinSoni30/Terragrunt_Demo/blob/main/images/13.png?raw=true)
 
-#Advantages of Terragrunt:
+# Advantages of Terragrunt:
 
 * Configure environments differently by setting different inputs in different terragrunt.hcl file
 * Configure separate backends for each environment to isolate environments
